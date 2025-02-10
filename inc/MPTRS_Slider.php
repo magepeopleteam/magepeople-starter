@@ -31,7 +31,7 @@
 			public function super_slider_only( $image_ids ) {
 				if ( is_array( $image_ids ) && sizeof( $image_ids ) > 0 ) {
 					?>
-					<div class="superSlider placeholder_area">
+					<div class="mptrs_slider placeholder_area">
 						<?php $this->slider_all_item( $image_ids ); ?>
 					</div>
 					<?php
@@ -43,7 +43,7 @@
 					$column_class      = $showcase_position == 'top' || $showcase_position == 'bottom' ? 'area_column' : '';
 					$slider_style      = MPTRS_Function::get_slider_settings( 'slider_style', 'style_1' );
 					?>
-					<div class="superSlider placeholder_area fdColumn">
+					<div class="mptrs_slider placeholder_area fdColumn">
 						<div class="dFlex  <?php echo esc_attr( $column_class ); ?>">
 							<?php
 								if ( $showcase_position == 'top' || $showcase_position == 'left' ) {
@@ -56,7 +56,7 @@
 								if ( $slider_style == 'style_2' ) {
 									?>
 									<div class="abTopLeft">
-										<button type="button" class="_dButton_bgWhite_textDefault" data-target-popup="superSlider" data-slide-index="1">
+										<button type="button" class="_dButton_bgWhite_textDefault" data-target-popup="mptrs_slider" data-slide-index="1">
 											<?php echo esc_html__( 'View All', 'tablely' ) . ' ' . esc_html(sizeof( $image_ids )) . ' ' . esc_html__( 'Images', 'tablely' ); ?>
 										</button>
 									</div>
@@ -80,7 +80,7 @@
 				$thumbnail = MPTRS_Function::get_image_url( '', $image_id );
 				if ( $thumbnail ) {
 					?>
-					<div class="superSlider">
+					<div class="mptrs_slider">
 						<div data-bg-image="<?php echo esc_html( $thumbnail ); ?>"></div>
 					</div>
 					<?php
@@ -95,7 +95,7 @@
 							foreach ( $image_ids as $id ) {
 								$image_url = MPTRS_Function::get_image_url( '', $id );
 								?>
-								<div class="sliderItem" data-slide-index="<?php echo esc_html( $count ); ?>" data-target-popup="superSlider" data-placeholder>
+								<div class="sliderItem" data-slide-index="<?php echo esc_html( $count ); ?>" data-target-popup="mptrs_slider" data-placeholder>
 									<div data-bg-image="<?php echo esc_html( $image_url ); ?>"></div>
 								</div>
 								<?php
@@ -143,7 +143,7 @@
 					}
 					if ( $count == 4 ) {
 						?>
-						<div class="sliderShowcaseItem" data-target-popup="superSlider" data-placeholder>
+						<div class="sliderShowcaseItem" data-target-popup="mptrs_slider" data-placeholder>
 							<div data-bg-image="<?php echo esc_html( $image_url ); ?>"></div>
 							<div class="sliderMoreItem">
 								<span class="fas fa-plus"></span>
@@ -162,7 +162,7 @@
 					$image_url = MPTRS_Function::get_image_url( '', $id );
 					if ( $count > 1 && $count < 5 ) {
 						?>
-						<div class="sliderShowcaseItem" data-target-popup="superSlider" data-slide-index="<?php echo esc_html( $count ); ?>" data-placeholder>
+						<div class="sliderShowcaseItem" data-target-popup="mptrs_slider" data-slide-index="<?php echo esc_html( $count ); ?>" data-placeholder>
 							<div data-bg-image="<?php echo esc_html( $image_url ); ?>"></div>
 						</div>
 						<?php
@@ -207,8 +207,8 @@
 				if ( is_array( $image_ids ) && sizeof( $image_ids ) > 0 ) {
 					$popup_icon_indicator = MPTRS_Function::get_slider_settings( 'popup_icon_indicator', 'on' );
 					?>
-					<div class="sliderPopup" data-popup="superSlider">
-						<div class="superSlider">
+					<div class="sliderPopup" data-popup="mptrs_slider">
+						<div class="mptrs_slider">
 							<div class="popupHeader">
 								<h2><?php echo wp_kses_post(get_the_title( $post_id )); ?></h2>
 								<span class="fas fa-times popupClose"></span>

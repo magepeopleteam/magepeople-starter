@@ -112,7 +112,7 @@
 					foreach ($mptrs_faq as $key => $value) :
 						?>
                         <div class="mptrs-faq-item" data-id="<?php echo esc_attr($key); ?>">
-                            <section class="faq-header" data-collapse-target="#faq-content-<?php echo esc_attr($key); ?>">
+                            <section class="faq-header" data-mptrs-collapse="#faq-content-<?php echo esc_attr($key); ?>">
                                 <label class="label">
                                     <p><?php echo esc_html($value['title']); ?></p>
                                     <div class="faq-action">

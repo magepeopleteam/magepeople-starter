@@ -399,5 +399,5 @@
 				wp_reset_postdata();
 			}
 		}
-		new MPWPB_Woocommerce();
+		new MPTRS_Woocommerce();
 	}

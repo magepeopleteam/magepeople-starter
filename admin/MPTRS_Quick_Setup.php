@@ -111,7 +111,7 @@
                     <div class=_dShadow_6_adminLayout">
                         <form method="post" action="">
 							<?php wp_nonce_field('mptrs_quick_setup_nonce', 'mptrs_quick_setup_nonce'); ?>
-                            <div class="mpTabsNext">
+                            <div class="mptrs_tab_next">
                                 <div class="tabListsNext _max_700_mAuto">
                                     <div data-tabs-target-next="#mptrs_qs_welcome" class="tabItemNext" data-open-text="1" data-close-text=" " data-open-icon="" data-close-icon="fas fa-check" data-add-class="success">
                                         <h4 class="circleIcon" data-class>
@@ -144,11 +144,11 @@
                                 </div>
 								<?php if ($status == 1) { ?>
                                     <div class="justifyBetween">
-                                        <button type="button" class="mpBtn nextTab_prev">
+                                        <button type="button" class="mpBtn mptrs_tab_prev">
                                             <span>&longleftarrow;<?php esc_html_e('Previous', 'tablely'); ?></span>
                                         </button>
                                         <div></div>
-                                        <button type="button" class="themeButton nextTab_next">
+                                        <button type="button" class="themeButton mptrs_tab_next">
                                             <span><?php esc_html_e('Next', 'tablely'); ?>&longrightarrow;</span>
                                         </button>
                                     </div>

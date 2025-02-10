@@ -29,9 +29,9 @@
 				//*************Service Settings*****************//
 				require_once MPTRS_PLUGIN_DIR . '/admin/settings/MPTRS_Settings.php';
 				require_once MPTRS_PLUGIN_DIR . '/admin/settings/MPTRS_General_Settings.php';
-				require_once MPTRS_PLUGIN_DIR . '/admin/settings/Date_Time.php';
-				require_once MPTRS_PLUGIN_DIR . '/admin/settings/Extra_service.php';
-				require_once MPTRS_PLUGIN_DIR . '/admin/settings/Faq.php';
+				require_once MPTRS_PLUGIN_DIR . '/admin/settings/MPTRS_Date_Time_Settings.php';
+				require_once MPTRS_PLUGIN_DIR . '/admin/settings/MPTRS_Extra_service_Settings.php';
+				require_once MPTRS_PLUGIN_DIR . '/admin/settings/MPTRS_Faq_Settings.php';
 			}
 			public function add_dummy_data() {
 				new MPTRS_Dummy_Import();

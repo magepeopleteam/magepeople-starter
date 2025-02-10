@@ -67,7 +67,7 @@ function mptrs_load_sortable_datepicker(parent, item) {
             let html = '<div class="multi_image_item" data-image-id="' + attachment_id + '"><span class="fas fa-times circleIcon_xs remove_multi_image"></span>';
             html += '<img src="' + attachment_url + '" alt="' + attachment_id + '"/>';
             html += '</div>';
-            parent.find('.mp_multi_image').append(html);
+            parent.find('.mptrs_multi_image').append(html);
             let value = parent.find('.multi_image_value').val();
             value = value ? value + ',' + attachment_id : attachment_id;
             parent.find('.multi_image_value').val(value);

@@ -37,7 +37,7 @@
 				if (!$GLOBALS['mp_icon_popup_exit']) {
 					$GLOBALS['mp_icon_popup_exit'] = true;
 					?>
-                    <div class="add_icon_popup mpPopup mptrs_area" data-popup="#add_icon_popup">
+                    <div class="add_icon_popup mptrs_popup mptrs_area" data-popup="#add_icon_popup">
                         <div class="popupMainArea fullWidth">
                             <div class="popupHeader allCenter">
                                 <h2 class="_mR"><?php esc_html_e('Select Icon', 'tablely'); ?></h2>
@@ -113,7 +113,7 @@
 				?>
                 <div class="multi_image_area">
                     <input type="hidden" class="multi_image_value" name="<?php echo esc_attr($name); ?>" value="<?php esc_attr($images); ?>"/>
-                    <div class="mp_multi_image">
+                    <div class="mptrs_multi_image">
 						<?php
 							$all_images = explode(',', $images);
 							if ($images && sizeof($all_images) > 0) {

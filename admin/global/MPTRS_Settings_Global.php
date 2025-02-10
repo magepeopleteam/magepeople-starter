@@ -31,7 +31,7 @@
                     <div class="_dShadow_6 mpPanel">
                         <div class="mpPanelHeader"><?php echo esc_html($label . esc_html__(' Global Settings', 'tablely')); ?></div>
                         <div class="mpPanelBody mp_zero">
-                            <div class="mpTabs leftTabs">
+                            <div class="mptrs_tab leftTabs">
 								<?php $this->settings_api->show_navigation(); ?>
                                 <div class="tabsContent">
 									<?php $this->settings_api->show_forms(); ?>

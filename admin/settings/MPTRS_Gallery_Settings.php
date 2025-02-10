@@ -3,7 +3,6 @@
    * @Author 		engr.sumonazma@gmail.com
    * Copyright: 	mage-people.com
    */
-	use tablely\admin\settings\MPTRS_Settings;
 	if (!defined('ABSPATH')) {
 		die;
 	} // Cannot access pages directly.

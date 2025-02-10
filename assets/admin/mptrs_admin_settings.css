@@ -16,28 +16,28 @@
 }
 /******************************************************************** Meta tab settings ************************************************/
 @media only screen and (min-width: 10px) {
-	#mp_meta_box_panel .tabLists {border-right: 1px solid var(--mptrs_color_border);}
+	#mptrs_meta_box .tabLists {border-right: 1px solid var(--mptrs_color_border);}
 	/************************************/
-	#mp_meta_box_panel table {table-layout: fixed;border-collapse: collapse;border: 1px solid #F5F5F5;}
-	#mp_meta_box_panel table tr:nth-child(even) {background-color: #0CB32612;}
-	#mp_meta_box_panel table tr:nth-child(odd) {background-color: #FFF;}
-	#mp_meta_box_panel table th,
-	#mp_meta_box_panel table td {border: 0;vertical-align: top;padding: 5px;}
-	#mp_meta_box_panel table th {text-align: center;font-size: var(--mptrs_fs_label);font-weight: 600;}
-	#mp_meta_box_panel table tbody th {text-align: left;}
-	#mp_meta_box_panel table tbody thead th {text-align: center;}
+	#mptrs_meta_box table {table-layout: fixed;border-collapse: collapse;border: 1px solid #F5F5F5;}
+	#mptrs_meta_box table tr:nth-child(even) {background-color: #0CB32612;}
+	#mptrs_meta_box table tr:nth-child(odd) {background-color: #FFF;}
+	#mptrs_meta_box table th,
+	#mptrs_meta_box table td {border: 0;vertical-align: top;padding: 5px;}
+	#mptrs_meta_box table th {text-align: center;font-size: var(--mptrs_fs_label);font-weight: 600;}
+	#mptrs_meta_box table tbody th {text-align: left;}
+	#mptrs_meta_box table tbody thead th {text-align: center;}
 	/************************************/
-	#mp_meta_box_panel {margin: 15px 0;}
-	#mp_meta_box_panel .inside,
-	#mp_meta_box_panel .form-section {margin: 0;padding: 0;}
-	#mp_meta_box_panel .postbox-header { background-color: #1D2327;}
-	#mp_meta_box_panel .postbox-header h2 {color: #FFF;font-size: 18px;-webkit-justify-content: flex-start;justify-content: flex-start;}
-	#mp_meta_box_panel .postbox-header h2 span {margin: 0 7px 0 0;}
-	#mp_meta_box_panel .wp-editor-wrap {width: 100%;}
+	#mptrs_meta_box {margin: 15px 0;}
+	#mptrs_meta_box .inside,
+	#mptrs_meta_box .form-section {margin: 0;padding: 0;}
+	#mptrs_meta_box .postbox-header { background-color: #1D2327;}
+	#mptrs_meta_box .postbox-header h2 {color: #FFF;font-size: 18px;-webkit-justify-content: flex-start;justify-content: flex-start;}
+	#mptrs_meta_box .postbox-header h2 span {margin: 0 7px 0 0;}
+	#mptrs_meta_box .wp-editor-wrap {width: 100%;}
 }
 /******************************************************************** Image upload  ************************************************/
 @media only screen and (min-width: 10px) {
-	div.mp_multi_image { display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap;}
+	div.mptrs_multi_image { display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap;}
 	div.multi_image_item { position: relative; width: calc(25% - var(--mptrs_dmp_xs)); min-width: 150px;margin: 0 var(--mptrs_dmp_xs) var(--mptrs_dmp_xs) 0;}
 	span.remove_single_image,
 	div.mptrs_area span.remove_multi_image { cursor: pointer; position: absolute; top: 0; right: 0; background-color: var(--mptrs_color_danger);margin: 0; opacity: 0;}

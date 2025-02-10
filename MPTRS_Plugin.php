@@ -27,7 +27,6 @@
 				require_once MPTRS_PLUGIN_DIR . '/inc/MPTRS_Dependencies.php';
 				if (MPTRS_Function::check_woocommerce() == 1) {
 					add_action('activated_plugin', array($this, 'activation_redirect'), 90, 1);
-
 				} else {
 					require_once MPTRS_PLUGIN_DIR . '/Admin/MPTRS_Quick_Setup.php';
 					add_action('admin_notices', [$this, 'woocommerce_not_active']);

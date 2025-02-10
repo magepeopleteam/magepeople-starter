@@ -15,7 +15,6 @@
 				?>
                 <div class="tabsItem" data-tabs="#mptrs_general_info">
                     <h2><?php esc_html_e('General Information Settings', 'tablely'); ?></h2>
-
                 </div>
 				<?php
 			}

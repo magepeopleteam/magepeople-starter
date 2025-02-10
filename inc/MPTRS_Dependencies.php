@@ -41,7 +41,7 @@
 				wp_enqueue_style('mp_owl_carousel', MPTRS_PLUGIN_URL . '/assets/owl_carousel/owl.carousel.min.css', array(), '2.3.4');
 				wp_enqueue_script('mp_owl_carousel', MPTRS_PLUGIN_URL . '/assets/owl_carousel/owl.carousel.min.js', array(), '2.3.4',true);
 				wp_enqueue_style('mptrs_global', MPTRS_PLUGIN_URL . '/assets/mp_style/mptrs_global.css', array(), time());
-				wp_enqueue_script('mptrs_global', MPTRS_PLUGIN_URL . '/assets/mp_style/mptrs_global.js', array('jquery'), time(), true);
+				wp_enqueue_script('mptrs_global', MPTRS_PLUGIN_URL . '/assets/mp_style/mptrs_global.js',  ['jquery'], time());
 				do_action('add_mptrs_global_enqueue');
 			}
 			public function admin_scripts() {

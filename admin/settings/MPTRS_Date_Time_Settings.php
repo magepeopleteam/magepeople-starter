@@ -3,7 +3,6 @@
    * @Author 		engr.sumonazma@gmail.com
    * Copyright: 	mage-people.com
    */
-	use tablely\admin\settings\MPTRS_Settings;
 	if (!defined('ABSPATH')) {
 		die;
 	} // Cannot access pages directly.
@@ -47,14 +46,14 @@
                             <div>
                                 <p><?php esc_html_e('Date Type', 'tablely'); ?> <span class="textRequired">&nbsp;*</span></p>
                             </div>
-                            <select class="" name="mptrs_date_type" data-collapse-target required>
+                            <select class="" name="mptrs_date_type" data-mptrs-collapse required>
                                 <option disabled selected><?php esc_html_e('Please select ...', 'tablely'); ?></option>
-                                <option value="particular" data-option-target="#mp_particular" <?php echo esc_attr($date_type == 'particular' ? 'selected' : ''); ?>><?php esc_html_e('Particular', 'tablely'); ?></option>
-                                <option value="repeated" data-option-target="#mp_repeated" <?php echo esc_attr($date_type == 'repeated' ? 'selected' : ''); ?>><?php esc_html_e('Repeated', 'tablely'); ?></option>
+                                <option value="particular" data-option-target="#mptrs_particular" <?php echo esc_attr($date_type == 'particular' ? 'selected' : ''); ?>><?php esc_html_e('Particular', 'tablely'); ?></option>
+                                <option value="repeated" data-option-target="#mptrs_repeated" <?php echo esc_attr($date_type == 'repeated' ? 'selected' : ''); ?>><?php esc_html_e('Repeated', 'tablely'); ?></option>
                             </select>
                         </label>
                     </section>
-                    <section class="<?php echo esc_attr($date_type == 'particular' ? 'mActive' : ''); ?>" data-collapse="#mp_particular">
+                    <section class="<?php echo esc_attr($date_type == 'particular' ? 'mActive' : ''); ?>" data-collapse="#mptrs_particular">
                         <label class="_dFlex_justifyBetween">
                             <div>
                                 <p><?php esc_html_e('Particular Dates', 'tablely'); ?> <span class="textRequired">&nbsp;*</span></p>
@@ -81,7 +80,7 @@
                             </div>
                         </label>
                     </section>
-                    <section class="<?php echo esc_attr($date_type == 'repeated' ? 'mActive' : ''); ?>" data-collapse="#mp_repeated">
+                    <section class="<?php echo esc_attr($date_type == 'repeated' ? 'mActive' : ''); ?>" data-collapse="#mptrs_repeated">
                         <label class="label">
                             <div>
                                 <p><?php esc_html_e('Repeated Start Date', 'tablely'); ?> <span class="textRequired">&nbsp;*</span></p>
@@ -92,48 +91,12 @@
                             </div>
                         </label>
                     </section>
-                    <section class="<?php echo esc_attr($date_type == 'repeated' ? 'mActive' : ''); ?>" data-collapse="#mp_repeated">
+                    <section class="<?php echo esc_attr($date_type == 'repeated' ? 'mActive' : ''); ?>" data-collapse="#mptrs_repeated">
                         <label class="label">
                             <div>
                                 <p><?php esc_html_e('Repeated after', 'tablely'); ?> <span class="textRequired">&nbsp;*</span></p>
                             </div>
                             <input type="text" name="mptrs_repeated_after" class="mp_number_validation" value="<?php echo esc_attr($repeated_after); ?>"/>
-                        </label>
-                    </section>
-                    <section class="<?php echo esc_attr($date_type == 'repeated' ? 'mActive' : ''); ?>" data-collapse="#mp_repeated">
-                        <label class="label">
-                            <div>
-                                <p><?php esc_html_e('Maximum advanced day booking', 'tablely'); ?> <span class="textRequired">&nbsp;*</span></p>
-                            </div>
-                            <div>
-                                <input type="text" name="mptrs_active_days" class="mp_number_validation" value="<?php echo esc_attr($active_days); ?>"/>
-                            </div>
-                        </label>
-                    </section>
-                    <section>
-                        <label class="label">
-                            <div>
-                                <p><?php esc_html_e('Time Slot Length', 'tablely'); ?> <span class="textRequired">&nbsp;*</span></p>
-                            </div>
-                            <select name="mptrs_time_slot_length">
-                                <option selected disabled><?php esc_html_e('Select time slot Length', 'tablely'); ?></option>
-                                <option value="10" <?php echo esc_attr($time_slot == 10 ? 'selected' : ''); ?>><?php esc_html_e('10 min', 'tablely'); ?></option>
-                                <option value="15" <?php echo esc_attr($time_slot == 15 ? 'selected' : ''); ?>><?php esc_html_e('15 min', 'tablely'); ?></option>
-                                <option value="30" <?php echo esc_attr($time_slot == 30 ? 'selected' : ''); ?>><?php esc_html_e('30 min', 'tablely'); ?></option>
-                                <option value="60" <?php echo esc_attr($time_slot == 60 ? 'selected' : ''); ?>><?php esc_html_e('1 Hour', 'tablely'); ?></option>
-                                <option value="120" <?php echo esc_attr($time_slot == 120 ? 'selected' : ''); ?>><?php esc_html_e('2 Hour', 'tablely'); ?></option>
-                                <option value="180" <?php echo esc_attr($time_slot == 180 ? 'selected' : ''); ?>><?php esc_html_e('3 Hour', 'tablely'); ?></option>
-                            </select>
-                        </label>
-                    </section>
-                    <section>
-                        <label class="label">
-                            <div>
-                                <p><?php esc_html_e('Capacity per Session', 'tablely'); ?> <span class="textRequired">&nbsp;*</span></p>
-                            </div>
-                            <div>
-                                <input class="formControl" name="mptrs_capacity_per_session" type="number" value="<?php echo esc_attr($capacity); ?>" placeholder="Ex. 25"/>
-                            </div>
                         </label>
                     </section>
                     <!-- ================ -->

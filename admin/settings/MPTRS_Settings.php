@@ -16,7 +16,7 @@
 			public function settings_meta() {
 				$label = MPTRS_Function::get_name();
 				$cpt = MPTRS_Function::get_cpt();
-				add_meta_box('mp_meta_box_panel', $label . esc_html__(' Information Settings : ', 'tablely') . get_the_title(get_the_id()), array($this, 'settings'), $cpt, 'normal', 'high');
+				add_meta_box('mptrs_meta_box', $label . esc_html__(' Information Settings : ', 'tablely') . get_the_title(get_the_id()), array($this, 'settings'), $cpt, 'normal', 'high');
 			}
 			//******************************//
 			public function settings() {
@@ -24,20 +24,20 @@
 				wp_nonce_field('mptrs_nonce', 'mptrs_nonce');
 				?>
                 <div class="mptrs_area">
-                    <div class="mpTabs metabox">
+                    <div class="mptrs_tab">
                         <div class="tabLists">
-                            <ul>
+                            <ul class="_fullWidth">
                                 <li data-tabs-target="#mptrs_general_info">
-                                    <i class="fas fa-tools pe-1"></i><?php esc_html_e('General Info', 'tablely'); ?>
+                                    <i class="fas fa-tools _mR_xs"></i><?php esc_html_e('General Info', 'tablely'); ?>
                                 </li>
                                 <li data-tabs-target="#mptrs_settings_date_time">
-                                    <i class="fas fa-clock pe-1"></i><?php esc_html_e('Date & Time', 'tablely'); ?>
+                                    <i class="fas fa-clock _mR_xs"></i><?php esc_html_e('Date & Time', 'tablely'); ?>
                                 </li>
                                 <li data-tabs-target="#mptrs_extra_service_settings">
-                                    <i class="fas fa-funnel-dollar pe-1"></i><?php esc_html_e('Extra Service', 'tablely'); ?>
+                                    <i class="fas fa-funnel-dollar _mR_xs"></i><?php esc_html_e('Extra Service', 'tablely'); ?>
                                 </li>
                                 <li data-tabs-target="#mptrs_faq_settings">
-                                    <i class="fas fa-question-circle pe-1"></i><?php esc_html_e('FAQ', 'tablely'); ?>
+                                    <i class="fas fa-question-circle _mR_xs"></i><?php esc_html_e('FAQ', 'tablely'); ?>
                                 </li>
 								<?php do_action('add_mptrs_settings_tab_after_date', $post_id); ?>
                             </ul>
@@ -134,9 +134,10 @@
 			}
 			public static function description_array($key) {
 				$des = array(
-					//======Slider==========//
 					'mpwpb_display_slider' => esc_html__('By default slider is ON but you can keep it off by switching this option', 'tablely'),
 					'mpwpb_slider_images' => esc_html__('Please upload images for gallery', 'tablely'),
+					'date_time_desc' => esc_html__('Date & time settings', 'tablely'),
+					'general_date_time_desc' => esc_html__('Date & time settings', 'tablely'),
 					//''          => esc_html__( '', 'tablely' ),
 				);
 				$des = apply_filters('mpwpb_filter_description_array', $des);

@@ -105,7 +105,7 @@
 				?>
                 <label class="roundSwitchLabel">
                     <input type="checkbox" name="<?php echo esc_attr($name); ?>" <?php echo esc_attr($checked); ?>>
-                    <span class="roundSwitch" data-collapse-target="#<?php echo esc_attr($name); ?>"></span>
+                    <span class="roundSwitch" data-mptrs-collapse="#<?php echo esc_attr($name); ?>"></span>
                 </label>
 				<?php
 			}
