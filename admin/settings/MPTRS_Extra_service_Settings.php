@@ -21,7 +21,7 @@
 				add_action('wp_ajax_nopriv_mptrs_ext_service_delete_item', [$this, 'extra_service_delete_item']);
 			}
 			public function ext_service_update_item() {
-				if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'])), 'mprts_admin_nonce')) {
+				if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'])), 'mptrs_admin_nonce')) {
 					wp_send_json_error('Invalid nonce!'); // Prevent unauthorized access
 				}
 				$post_id = isset($_POST['service_postID']) ? sanitize_text_field(wp_unslash($_POST['service_postID'])) : '';
@@ -62,7 +62,7 @@
 				die;
 			}
 			public function save_ex_service() {
-				if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'])), 'mprts_admin_nonce')) {
+				if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'])), 'mptrs_admin_nonce')) {
 					wp_send_json_error('Invalid nonce!'); // Prevent unauthorized access
 				}
 				$post_id = isset($_POST['service_postID']) ? sanitize_text_field(wp_unslash($_POST['service_postID'])) : '';
@@ -129,7 +129,7 @@
                         <span><?php esc_html_e('Extra Service Settings', 'tablely'); ?></span>
                     </section>
                     <section>
-                        <label class="label">
+                        <div class="label">
                             <div>
                                 <p><?php esc_html_e('Enable Extra Service', 'tablely'); ?></p>
                                 <span><?php esc_html_e('Enable Extra Service.', 'tablely'); ?></span>
@@ -137,7 +137,7 @@
                             <div>
 								<?php MPTRS_Layout::switch_button('mptrs_extra_service_active', $extra_service_checked); ?>
                             </div>
-                        </label>
+                        </div>
                     </section>
                     <section class="mptrs-extra-section <?php echo esc_attr($active_class); ?>" data-collapse="#mptrs_extra_service_active">
                         <table class="table extra-service-table mB">
@@ -252,7 +252,7 @@
 				endif;
 			}
 			public function extra_service_delete_item() {
-				if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'])), 'mprts_admin_nonce')) {
+				if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'])), 'mptrs_admin_nonce')) {
 					wp_send_json_error('Invalid nonce!'); // Prevent unauthorized access
 				}
 				$post_id = isset($_POST['service_postID']) ? sanitize_text_field(wp_unslash($_POST['service_postID'])) : '';
