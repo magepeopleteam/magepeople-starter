@@ -44,7 +44,7 @@
                         <span><?php esc_html_e('FAQ Settings', 'tablely'); ?></span>
                     </section>
                     <section>
-                        <label class="label">
+                        <div class="label">
                             <div>
                                 <p><?php esc_html_e('Enable FAQ Section', 'tablely'); ?></p>
                                 <span><?php esc_html_e('Enable FAQ Section', 'tablely'); ?></span>
@@ -52,7 +52,7 @@
                             <div>
 								<?php MPTRS_Layout::switch_button('mptrs_faq_active', $mptrs_faq_active_checked); ?>
                             </div>
-                        </label>
+                        </div>
                     </section>
                     <section class="mptrs-faq-section <?php echo esc_attr($active_class); ?>" data-collapse="#mptrs_faq_active">
                         <div class="mptrs-faq-items mB">
@@ -111,7 +111,7 @@
 				if (!empty($mptrs_faq)):
 					foreach ($mptrs_faq as $key => $value) :
 						?>
-                        <div class="mptrs-faq-item" data-id="<?php echo esc_attr($key); ?>">
+                        <div class="mptrs-faq-item mptrs_area" data-id="<?php echo esc_attr($key); ?>">
                             <section class="faq-header" data-mptrs-collapse="#faq-content-<?php echo esc_attr($key); ?>">
                                 <label class="label">
                                     <p><?php echo esc_html($value['title']); ?></p>
@@ -131,7 +131,7 @@
 				endif;
 			}
 			public function faq_data_update() {
-				if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'])), 'mprts_admin_nonce')) {
+				if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'])), 'mptrs_admin_nonce')) {
 					wp_send_json_error('Invalid nonce!'); // Prevent unauthorized access
 				}
 				$post_id = isset($_POST['mptrs_faq_postID']) ? sanitize_text_field(wp_unslash($_POST['mptrs_faq_postID'])) : '';
@@ -157,7 +157,7 @@
 				die;
 			}
 			public function save_faq_data_settings() {
-				if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'])), 'mprts_admin_nonce')) {
+				if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'])), 'mptrs_admin_nonce')) {
 					wp_send_json_error('Invalid nonce!'); // Prevent unauthorized access
 				}
 				$post_id = isset($_POST['mptrs_faq_postID']) ? sanitize_text_field(wp_unslash($_POST['mptrs_faq_postID'])) : '';
@@ -189,7 +189,7 @@
 				die;
 			}
 			public function faq_delete_item() {
-				if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'])), 'mprts_admin_nonce')) {
+				if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'])), 'mptrs_admin_nonce')) {
 					wp_send_json_error('Invalid nonce!'); // Prevent unauthorized access
 				}
 				$post_id = isset($_POST['mptrs_faq_postID']) ? sanitize_text_field(wp_unslash($_POST['mptrs_faq_postID'])) : '';

@@ -500,7 +500,7 @@ function mptrs_sticky_management() {
     "use strict";
     $(document).on('click', '.mptrs_area [data-mptrs-collapse]', function () {
         let currentTarget = $(this);
-        let target_id = currentTarget.data('collapse-target');
+        let target_id = currentTarget.data('mptrs-collapse');
         let close_id = currentTarget.data('close-target');
         let target = $('[data-collapse="' + target_id + '"]');
         if (target_close(close_id, target_id) && collapse_close_inside(currentTarget) && target_collapse(target, currentTarget)) {

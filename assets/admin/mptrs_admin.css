@@ -280,7 +280,7 @@ div.mpwpb_category_header, div.mpwpb_category_header div.mpwpb_service_area {
   padding: 0;
   font-size: 16px;
 }
-#mptrs_meta_box .mptrs_tab .tabsContent section label.label {
+#mptrs_meta_box .mptrs_tab .tabsContent section .label {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -289,16 +289,16 @@ div.mpwpb_category_header, div.mpwpb_category_header div.mpwpb_service_area {
   color: var(--mage-black);
   font-size: 14px;
 }
-#mptrs_meta_box .mptrs_tab .tabsContent section label.label p {
+#mptrs_meta_box .mptrs_tab .tabsContent section .label p {
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 5px;
   color: var(--mage-black);
 }
-#mptrs_meta_box .mptrs_tab .tabsContent section label.label input, #mptrs_meta_box .mptrs_tab .tabsContent section label.label select, #mptrs_meta_box .mptrs_tab .tabsContent section label.label textarea {
+#mptrs_meta_box .mptrs_tab .tabsContent section .label input, #mptrs_meta_box .mptrs_tab .tabsContent section .label select, #mptrs_meta_box .mptrs_tab .tabsContent section .label textarea {
   width: 360px;
 }
-#mptrs_meta_box .mptrs_tab .tabsContent section label.label span {
+#mptrs_meta_box .mptrs_tab .tabsContent section .label span {
   font-size: 14px;
   font-weight: normal;
 }

@@ -1,4 +1,13 @@
 (function ($) {
+    // =====================sidebar modal open close=============
+    $(document).on('click', '[data-modal]', function (e) {
+        const modalTarget = $(this).data('modal');
+        $(`[data-modal-target="${modalTarget}"]`).addClass('open');
+    });
+    $(document).on('click', '[data-modal-target] .mptrs-modal-close', function (e) {
+        $(this).closest('[data-modal-target]').removeClass('open');
+
+    });
     // ============= Faq sidebar modal ======================
     $(document).on('click', '.mptrs-faq-item-new', function (e) {
         $('#mptrs-faq-msg').html('');
