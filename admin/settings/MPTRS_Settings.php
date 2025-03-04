@@ -77,10 +77,6 @@
 					$active_days = isset($_POST['mptrs_active_days']) ? sanitize_text_field(wp_unslash($_POST['mptrs_active_days'])) : '';
 					update_post_meta($post_id, 'mpwpb_active_days', $active_days);
 					//**********************//
-					$time_slot_length = isset($_POST['mpwpb_time_slot_length']) ? sanitize_text_field(wp_unslash($_POST['mpwpb_time_slot_length'])) : '';
-					$capacity_per_session = isset($_POST['mpwpb_capacity_per_session']) ? sanitize_text_field(wp_unslash($_POST['mpwpb_capacity_per_session'])) : '';
-					update_post_meta($post_id, 'mpwpb_time_slot_length', $time_slot_length);
-					update_post_meta($post_id, 'mpwpb_capacity_per_session', $capacity_per_session);
 					//**********************//
 					$this->save_schedule($post_id, 'default');
 					$days = MPTRS_Function::week_day();
@@ -88,8 +84,8 @@
 						$this->save_schedule($post_id, $key);
 					}
 					//**********************//
-					$off_days = isset($_POST['mpwpb_off_days']) ? array_map('sanitize_text_field', wp_unslash($_POST['mpwpb_off_days'])) : [];
-					update_post_meta($post_id, 'mpwpb_off_days', $off_days);
+					$off_days = isset($_POST['mptrs_off_days']) ? sanitize_text_field(wp_unslash($_POST['mptrs_off_days'])) : [];
+					update_post_meta($post_id, 'mptrs_off_days', $off_days);
 					//**********************//
 					$off_dates = isset($_POST['mpwpb_off_dates']) ? array_map('sanitize_text_field', wp_unslash($_POST['mpwpb_off_dates'])) : [];
 					$_off_dates = array();
